@@ -12,8 +12,7 @@ local closeWindowBind
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
-
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "SUPER" -- Sets "Windows" or "Command" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
