@@ -1,0 +1,71 @@
+/* Base Font Styling */
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif; /* 0.1.196 */
+    font-size: 14px; /* 0.1.284 */
+    font-weight: bold; /* 0.1.204 */
+    border: none;
+    border-radius: 0;
+}
+
+/* Master Bar Container - Transparent to create an "Island" effect */
+window#waybar {
+    background-color: transparent; /* 0.1.240 */
+}
+
+/* Base style for every standalone element on the bar */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery {
+    background-color: #323d49; /* Dark slate monochrome palette */
+    color: #e8eaed;            /* Off-white text */
+    padding: 4px 14px;
+    margin: 0px 6px;           /* Spacing between floating pill modules */
+    border-radius: 8px;        /* Soft rounded aesthetic */
+}
+
+/* --- Smart Workspace States --- */
+
+/* Individual workspace numbers */
+#workspaces button {
+    color: #e8eaed;
+    padding: 0px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out; /* Smooth transition states */
+}
+
+/* Active / Currently Focused Workspace */
+#workspaces button.active {
+    background-color: #6cbdde; /* Pops active desktop out with a subtle color accent */
+    color: #323d49;            /* Inverts text for high contrast */
+}
+
+/* Hover effect on desktop numbers */
+#workspaces button:hover {
+    background-color: rgba(232, 234, 237, 0.2);
+    color: #e8eaed;
+}
+
+/* Base battery capsule styling */
+#battery {
+    background-color: #323d49;
+    color: #e8eaed;
+}
+
+/* Automatically changes text color to orange when under 30% */
+#battery.warning {
+    color: #fab387; 
+}
+
+/* Automatically flashes or turns red when under 15% */
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #11111b;
+}
+
+/* Changes style to show a charging theme when plugged into the wall */
+#battery.charging {
+    color: #a6e3a1;
+}
+
